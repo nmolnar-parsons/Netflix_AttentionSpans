@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Span - Netflix Jan-Jun 2025</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="title">
+        <h1>Attention Span</h1>
+        <h2>Netflix Movie Runtime and Viewership, January - June 2025 </h2>
+    </div>
+    <div id = "intro">
+        <p class = "intro-text">Between January and June of 2025, 11,390,100,000 (11.39 billion!) views were shared between 1851 different movies on Netflix.
+            <br></br>
+            In this sea of movies, 10 features stand out from the rest, representing a combined 897,100,000 (897 million!) views:</p>
+        <div id="top-10-figure"></div>
+        <p class = "intro-text">
+            These movies vary in genre (from Animation to Romance) and rating (from PG to R). <i>Straw</i>, a serious drama following a single mother on an
+            extremely difficult day, has very little in common with <i>The Secret Life of Pets 2</i>, a animated comedy extremely popular young children
+            (<i>The Secret Life of Pets</i> (the first one) just barely misses out on top 10, by 800,000 views).
+            <br></br>
+            Despite their differences, these movies are relatively similar in runtime. If you watched a movie on Netflix in this time period, it could be anywhere
+            from a measly 9 minutes long to a staggering 224 minutes long.
+            <br></br>
+            But the most popular movies (including our top 10) are found within a ~45 minutes window, ranging from 80 minutes (just shy of 1.5 hours) to 130 minutes (just over two hours) long.
+            This, it seems, is the sweet spot for our attention spans.
+            <br></br>
+            <br></br>
+            <br></br>
+            </p>
+        <div id ="intro-scatterplot"></div>
+        <p class = "intro-text">Comparing Runtime (in minutes) to  Views (rounded to the nearest 100,000 views) gathered from Netflix's
+            <i>What We Watched the First Half of 2025</i> Report, we can see which movies are most favorable to our attention spans. 
+            Our top 10 movies (highlighted in red) stand out from the rest of the pack.
+
+            <br></br>
+            If we ignore these standout movies, we can begin to pick apart the genre-specific trends in movie runtimes and viewership.
+            <br></br>
+            <br></br>
+            <br></br>
+
+        </p>
+    </div>
+    <section id="scrolly">
+        <article>
+            <div class="step" data-step="1">
+                <p> Zooming into the main cluster of movies, we can see that most movies are between 80 minutes and 150 minutes long. 
+                    These movies are long enough to 
+                    watch in a single sitting, but not so long that they deter viewers.
+                    <br></br>
+                    The Average Netflix Movie in this time period is 108 minutes long, has 6.3 million views, and contains the words
+                    "2, Part, My, and, Movie" in the title. A lot of sequels, and lot of self referential titles.
+
+                </p>
+            </div>
+            <div class="step" data-step="2">
+                <p><span style="color: #ff8ab7;">Animation</span> movies are more popular and shorter than the average movie. 
+                    Most are between 85 and 100 minutes long.
+                    <br>
+                    <br>
+                    If you want to make a popular movie, it might be in your best interest to make it animated and keep it under 100 minutes.
+                </p>
+            </div>
+            <div class="step" data-step="3">
+                <p><span style="color: #4269d0;">Action</span> movies tend to be longer, with more popular action movies being found in the 
+                    100 minute to 140 minute range.
+                    <br>
+                    <br>
+                    Action movies can run long and still get a lot of views, which is not the case for other genres.
+                </p>
+            </div>
+            <div class="step" data-step="4">
+                <p><span style="color: #6cc5b0;">Romance</span> movies have fewer views overall. Most fall between 90 minutes and 130 minutes,
+                    and high viewcount movies don't appear to have a specific length advantage.
+                    <br>
+                    <br>
+                    In fact, if you're making a Romance movie, avoid a 110 minute runtime - these seem to struggle.
+                </p>
+            </div>
+            <div class="step" data-step="5">
+                <p><span style="color: #efb118;">Comedies</span> tend to be shorter, with most under or around 120 minutes long. 
+                    Again, there doesn't seem to be a specific length advantage for high viewcount.
+                </p>
+            </div>
+
+            <div class="step" data-step="6">
+                <p>While <span style="color: #97bbf5;">Horror</span> Movies overall have lower view counts, the most popular ones are between 90 and 100 minutes long.
+                    Shorter movies are your ticket to success in this genre.
+                </p>
+            </div>
+
+            <div class="step" data-step="7">
+                <p><span style="color: #ff725c;">Dramas</span> tend to be longer, but their length doesn't see to improve view counts.
+                     The most popular dramas in this time period are either 90 minutes or 130 minutes long.
+                </p>
+            </div>
+
+            <div class="step" data-step="8">
+                <p><span style="color: #3ca951;">Adventure</span> movies are not as common as other genres. 
+                    These movies tend to be longer, but the most popular exampels are on the shorter side of the genres.
+                </p>
+            </div>
+
+            <div class="step" data-step="9">
+                <p><span style="color: #a463f2;">Documentaries</span> are shorter than other genres, with the longest one in this dataset at a relatively short 122 minutes.
+                    Not as many Documentaries are found on Netflix as other categories, but a few manage to get a good number of views.
+                </p>
+            </div>
+
+            <div class="step" data-step="9">
+                <p>If there are two winners early 2025, they are <span style="color: #ff8ab7;">Animation</span> and <span style="color: #4269d0;">Action</span> movies.
+                    <br>
+                    <br>
+                    Both genres manage to capture a lot of views, making them the most popular genres on Netflix in the first half of 2025. 
+                </p>
+            </div>
+        </article>
+        <figure>
+            <div id="plots"></div>
+        </figure>
+    </section>
+    <div id = "exit">
+        <p class = "intro-text">
+            <br></br>
+            <br></br>
+            Many, many factors can influence a movie's runtime, and it's usually not clear how long a movie will be until it is made.
+            Genre conventions play a role, as can director's styles, target audiences, and production constraints. Furthermore, while the <i>most popular movies</i> are found in this 45 minute range, so are  
+            <i>most Netflix movies</i>: a higher density of movies means      a higher chance some of them will be super popular.
+            <br></br>
+            When someone sits down to watch a movie on Netflix, they will probably choose something that fits their available time. 
+            If they're watching with kids, they might go for something shorter.
+            If they have a free evening, they might pick something longer.
+            <br></br>
+            Despite these nuances, it seems that our attention spans are best suited for movies that are around 1.5 to 2 hours long.
+            <br></br>
+            <br></br>
+            <br></br>
+
+        </p>
+    </div>
+    <footer>
+        <h2 id = "credits">
+            Credits: By Nichos Molnar, PGDV 5100, 2025
+            <br>
+            Data from Netflix's <a target="_blank" rel="noopener noreferrer" href ="https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2025">What We Watched the First Half of 2025</a>
+            and TMDB API
+    </h2>
+
+    </footer>
+
+    <script src = "main.js"></script>
+</body>

@@ -1,0 +1,357 @@
+/* color for labels and generally grey text */
+:root {
+    --label-color: #dadada;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #121212;
+}
+
+
+
+.intro-text {
+    font-size: 16px;
+    margin: 20px auto; /* Center horizontally */
+    color: rgb(238, 238, 238);
+    width: 58%; /* Constrain to the middle 60% of the screen */
+    text-align: left; /* Center-align text */
+}   
+
+li {
+    font-size: 14px;
+    margin: 10px 0px 10px 40px;
+    color: rgb(238, 238, 238);
+}
+
+article {
+  flex: 0 0 25%; /* Set article to take up 20% of the screen width */
+  padding: 20px;
+  color: rgb(0, 0, 0); /* Ensure text is visible against the black background */
+  font-size: 16px;
+  line-height: 1.5;
+  /* Remove overflow-y: auto to allow natural page scrolling */
+  /* Remove height: 100vh to allow natural content height */
+}
+
+article .step {
+  height: 75vh; /* Each step takes up 75% of the vertical screen space */
+  width: 20vw; /* Set width to 20% of viewport height */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+figure {
+  flex: 1; /* Allow figure to take up the remaining space */
+  position: -webkit-sticky;
+  position: sticky;
+  /* Remove height and top - these will be set by JavaScript */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p1{
+    text-align: left;
+    font-size: 14px;
+    margin: 20px 20px 10px 40px;
+    color: #e50914;
+}
+
+#tick {
+    color : var(--label-color);
+}
+
+
+.scatter_x-axis text, .scatter_y-axis text {
+    fill: var(--label-color);
+    font-size: 12px;
+}
+.scatter_x-axis path, .scatter_x-axis line, .scatter_y-axis path, .scatter_y-axis line {
+    stroke: var(--label-color);
+}
+
+.bar_x-axis text, .bar_y-axis text {
+    fill: var(--label-color);
+    font-size: 12px;
+}
+.bar_x-axis path, .bar_x-axis line, .bar_y-axis path, .bar_y-axis line {
+    stroke: var(--label-color);
+}
+
+
+
+.top10_x-axis text, .top10_y-axis text,
+.intro_scatter_x-axis text, .intro_scatter_y-axis text {
+    fill: var(--label-color);
+    font-size: 12px;
+    
+}
+
+.top10_x-axis path, .top10_x-axis line,
+.top10_y-axis path, .top10_y-axis line,
+.intro_scatter_x-axis path, .intro_scatter_x-axis line,
+.intro_scatter_y-axis path, .intro_scatter_y-axis line {
+    stroke: var(--label-color);
+}
+
+
+.bar-label {
+    fill: var(--label-color);
+    font-size: 15px;
+    font-weight: normal;
+    pointer-events: none;
+}
+
+
+
+.psuedo_footer {
+    margin: 10px;
+    font-size: 12px;
+    color: #e50914;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin: 20px 20px 10px 40px;
+    color: #e50914;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: #e50914a4;
+}
+
+#credits {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+    color: #e50914a4;
+}
+
+#footer_link {
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: #e50914;
+    text-decoration: underline;
+}
+#footer_text {
+    margin: 0;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #e50914;
+}
+#top10 {
+    height: 90vh;
+    width: auto;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: black;
+}
+
+h4 {
+    color: rgb(238, 238, 238);
+    margin-bottom: 8px;
+}
+
+/* footer {
+    bottom: 0;
+    z-index: 100;
+    background: black; 
+    width: 100%;
+    padding: 10px 0;
+} */
+#content {
+    position: relative;
+    background: transparent;
+    overflow-y: auto;
+    margin-bottom: 50px;
+    display: flex; /* Make content a flex container */
+    flex-direction: row; /* Horizontal layout: menu left, plots right */
+    align-items: flex-start;
+}
+
+/* Menu styling for vertical alignment */
+#menu {
+    min-width: 120px;
+    max-width: 140px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: transparent;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+#plots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex: 0 0 auto; /* Prevent it from stretching */
+    height: 100%;
+    width: auto;
+    overflow: visible;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-right: auto; /* Push it to the left */
+}
+
+.top-menu {
+  margin-bottom: 20px;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filters {
+  flex-direction: column;
+  display: flex ;
+}
+
+.checkbox-genre {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-genre label {
+  color: rgb(238, 238, 238);
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+/* Adjust layout for scrolly storytelling */
+.scrolly {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* Scrolly storytelling styles */
+#scrolly {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #121212;
+    padding: 1rem;
+}
+
+#scrolly>* {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly article {
+    position: relative;
+    padding: 0 1rem;
+    max-width: 20rem;
+}
+
+#scrolly figure {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 75%;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background-color: #2b2727;
+    z-index: 0;
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: flex-start; /* Align content to the left */
+    overflow: hidden;
+    border-radius: 10px;
+    padding-left: 30px; /* Add 30px margin from the left edge */
+}
+
+#scrolly figure p {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+#scrolly .step {
+    margin: 0 auto 1rem auto;
+    background-color: #2b2727;
+    color: #fff;
+    height: 75vh;
+    border-radius: 10px;
+
+}
+
+#scrolly .step:last-child {
+    margin-bottom: 0;
+}
+
+#scrolly .step.is-active {
+    background-color: goldenrod;
+    color: #3b3b3b;
+}
+
+#scrolly .step p {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.tick {
+    font-family: sans-serif;
+}
+
+#average-movie-display {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#average-movie-display h3 {
+    color: #e50914;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#average-movie-display p {
+    color: var(--label-color);
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+#top-10-figure, #intro-scatterplot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+    width: 100%; /* Ensure it spans the container */
+    margin-top: 30px;
+}
+
+
+.spacer {
+    height: 160px;
+}
